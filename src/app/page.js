@@ -10,15 +10,15 @@ const TelegramPage = () => {
 
   const handleOpenTelegram = () => {
     // Check if the Telegram app is available
+    window.location.href = `tg://resolve?domain=${channelUsername}`;
     const isTelegramAppAvailable = window.navigator.userAgent.includes('Telegram');
-    
-    if (isTelegramAppAvailable) {
-      // Open Telegram app with the provided channel username
-      window.location.href = `tg://resolve?domain=${channelUsername}`;
-    } else {
-      // Telegram app not available, provide feedback to the user
-      alert('The Telegram app is not installed on this device.');
-    }
+    // 
+    // if (isTelegramAppAvailable) {
+    //   // Open Telegram app with the provided channel username
+    // } else {
+    //   // Telegram app not available, provide feedback to the user
+    //   alert('The Telegram app is not installed on this device.');
+    // }
   };
 
   return (
